@@ -9,9 +9,9 @@ export default function App(){
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={<Upload />} />
-        <Route path="/upload" element={<Upload />} />
-        <Route path="/content" element={<Content />} />
+        <Route path="/" element={<Metamask />} />
+        {/* <Route path="/upload" element={<Upload />} /> */}
+        {/* <Route path="/content" element={<Content />} /> */}
         <Route path="/metamask" element={<Metamask />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>

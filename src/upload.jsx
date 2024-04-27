@@ -1,4 +1,7 @@
 // upload.jsx
+
+"use client";
+
 import React, { useState } from "react";
 
 export function Upload() {

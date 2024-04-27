@@ -4,7 +4,7 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import { Upload } from "./upload";
 import { Content } from "./content";
 
-export default function App(): JSX.Element {
+export default function App(){
   return (
     <HashRouter>
       <Routes>

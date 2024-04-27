@@ -2,16 +2,20 @@ import { useState } from "react";
 
 function App() {
   const [selectedFile, setSelectedFile] = useState();
+  const [fileName, setFileName] = useState(""); // Nuevo estado para guardar el nombre del archivo
+
   const changeHandler = (event) => {
     setSelectedFile(event.target.files[0]);
+    setFileName(event.target.files[0].name); // Guardar el nombre del archivo
   };
 
   const handleSubmission = async () => {
     try {
       const formData = new FormData();
       formData.append("file", selectedFile);
+      
       const metadata = JSON.stringify({
-        name: "File name",
+        name: fileName, // Usar el nombre del archivo para la metadata
       });
       formData.append("pinataMetadata", metadata);
 

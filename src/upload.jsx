@@ -1,12 +1,13 @@
-import { useState } from "react";
+// upload.jsx
+import React, { useState } from "react";
 
-function App() {
+export function Upload() {
   const [selectedFile, setSelectedFile] = useState();
-  const [fileName, setFileName] = useState(""); // Nuevo estado para guardar el nombre del archivo
+  const [fileName, setFileName] = useState(""); 
 
   const changeHandler = (event) => {
     setSelectedFile(event.target.files[0]);
-    setFileName(event.target.files[0].name); // Guardar el nombre del archivo
+    setFileName(event.target.files[0].name); 
   };
 
   const handleSubmission = async () => {
@@ -15,7 +16,7 @@ function App() {
       formData.append("file", selectedFile);
       
       const metadata = JSON.stringify({
-        name: fileName, // Usar el nombre del archivo para la metadata
+        name: fileName, 
       });
       formData.append("pinataMetadata", metadata);
 
@@ -50,4 +51,3 @@ function App() {
   );
 }
 
-export default App;
